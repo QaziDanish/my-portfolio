@@ -78,23 +78,23 @@ const About = () => {
 
             <div className="mt-5 justify-evenly text-justify">
               <p className="text-gray-600 dark:text-gray-300 text-[1.5rem]">
-                I’m a Senior Full Stack Developer with 10+ years of professional
-                software development experience using JavaScript and TypeScript
-                (Node.JS, React.JS). Currently, I’m leading an agile development
-                team of 8 where I’m in charge of developing highly scalable and
-                reliable applications using{" "}
+                I&apos;m a Senior Full Stack Developer with 10+ years of
+                professional software development experience using JavaScript
+                and TypeScript (Node.JS, React.JS). Currently, I&apos;m leading
+                an agile development team of 8 where I&apos;m in charge of
+                developing highly scalable and reliable applications using{" "}
                 <span className="font-medium">
                   Node.JS, Next.JS, React.JS & AWS{" "}
                 </span>
                 in multiple environments including microservices and monolithic.
-                I’ve worked across various industries for Pakistani and
+                I&apos;ve worked across various industries for Pakistani and
                 American-based companies, such as SelectQuote and CareCloud in a
                 fast-paced environment with a strong passion for building and
                 debugging reliable, high availability, secure and performant
                 distributed services. As a quick learner and love to take on new
                 challenges.
-                <span className="italic"> When I'm not coding</span>, I enjoy
-                playing video games, watching movies, I also enjoy{" "}
+                <span className="italic"> When I&apos;m not coding</span>, I
+                enjoy playing video games, watching movies, I also enjoy{" "}
                 <span className="font-medium">learning new things</span>. I am
                 currently learning about{" "}
                 <span className="font-medium">
