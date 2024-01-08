@@ -29,14 +29,6 @@ const Intro = () => {
       );
 
       homeObserver.observe(homeRef.current);
-
-      if (isHome) {
-        profileRef.current.classList.add("slide-in");
-        introRef.current.classList.add("slide-in");
-      } else {
-        profileRef.current.classList.remove("slide-in");
-        introRef.current.classList.remove("slide-in");
-      }
     }
   }, [homeRef, isHome]);
 
