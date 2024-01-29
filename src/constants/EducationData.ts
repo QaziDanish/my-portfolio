@@ -1,7 +1,7 @@
 export const EducationData = [
   {
     name: "Master in Software Engineering",
-    image: "/Images/Nust.png",
+    image: "/images/Nust.png",
     schoolOrCollege:
       "National University Of Science and Technology, Islamabad, Pakistan",
     fromTo: "2012 - 2015",
@@ -9,7 +9,7 @@ export const EducationData = [
   },
   {
     name: "Bachelor in Software Engineering",
-    image: "/Images/iiui.png",
+    image: "/images/iiui.png",
     schoolOrCollege: "International Islamic University Islamabad, Pakistan",
     fromTo: "2008 - 2012",
     statusOrPrecentage: "CGPA 3.81/4.0",
