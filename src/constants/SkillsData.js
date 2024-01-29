@@ -1,8 +1,6 @@
 import {
   SiNodedotjs,
   SiNextdotjs,
-  SiVercel,
-  SiNetlify,
   SiExpress,
   SiRedux,
   SiFirebase,
@@ -27,18 +25,8 @@ import {
   DiPython,
 } from "react-icons/di";
 import { BsGit } from "react-icons/bs";
-import {
-  FaBootstrap,
-  FaCss3Alt,
-  FaAngular,
-  FaPhp,
-  FaShopify,
-  FaJava,
-  FaAws,
-} from "react-icons/fa";
-import { TbBrandReactNative } from "react-icons/tb";
+import { FaAngular, FaAws } from "react-icons/fa";
 import { GrGraphQl, GrMysql } from "react-icons/gr";
-import { BiLogoPostgresql } from "react-icons/bi";
 
 export const TechStackData = [
   {

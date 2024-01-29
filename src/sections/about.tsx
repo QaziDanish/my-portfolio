@@ -7,9 +7,9 @@ import { ImLocation } from "react-icons/im";
 const About = () => {
   const [isAbout, setIsAbout] = useState<boolean>(false);
 
-  const aboutRef = useRef();
-  const profile2Ref = useRef();
-  const aboutInfoRef = useRef();
+  const aboutRef = useRef<HTMLElement>(null);
+  const profile2Ref = useRef<HTMLImageElement>(null);
+  const aboutInfoRef = useRef<HTMLDivElement>(null);
 
   // Scroll Animation
   useEffect(() => {
@@ -29,14 +29,6 @@ const About = () => {
       );
 
       aboutObserver.observe(aboutRef.current);
-
-      if (isAbout) {
-        profile2Ref.current.classList.add("slide-in");
-        aboutInfoRef.current.classList.add("slide-in");
-      } else {
-        profile2Ref.current.classList.remove("slide-in");
-        aboutInfoRef.current.classList.remove("slide-in");
-      }
     }
   }, [isAbout, aboutRef]);
 

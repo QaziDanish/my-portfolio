@@ -1,16 +1,18 @@
 "use client";
-import React, { Fragment, useState, useEffect, useRef } from "react";
+import { useEffect, useRef, useState, Fragment } from "react";
 import { MdWork } from "react-icons/md";
 import { ImLocation } from "react-icons/im";
 import { BsArrowDownCircle } from "react-icons/bs";
 
 import { ExperienceData } from "@/constants/ExperienceData";
 
-const Experience = () => {
-  const [desc, setDesc] = useState("");
-  const [isExpe, setIsExpe] = useState(false);
-  const expeRef = useRef();
-  const expeBoxesRef = useRef();
+interface ExperienceProps {}
+
+const Experience: React.FC<ExperienceProps> = () => {
+  const [desc, setDesc] = useState<string>("");
+  const [isExpe, setIsExpe] = useState<boolean>(false);
+  const expeRef = useRef<HTMLDivElement>(null);
+  const expeBoxesRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const expeObserver = new IntersectionObserver(
@@ -22,11 +24,13 @@ const Experience = () => {
       }
     );
 
-    expeObserver.observe(expeRef.current);
+    if (expeRef.current) {
+      expeObserver.observe(expeRef.current);
+    }
 
-    if (isExpe) {
+    if (isExpe && expeBoxesRef.current) {
       expeBoxesRef.current.classList.add("pop-up-child");
-    } else {
+    } else if (expeBoxesRef.current) {
       expeBoxesRef.current.classList.remove("pop-up-child");
     }
   }, [isExpe]);
@@ -56,7 +60,7 @@ const Experience = () => {
                     setDesc(
                       desc === experience.description
                         ? ""
-                        : experience.description
+                        : experience.description || ""
                     )
                   }
                 >
@@ -76,9 +80,11 @@ const Experience = () => {
 
                   <p
                     className="mt-2 ml-2 mr-2 text-justify text-[1.1rem] overflow-y-auto scroll-px-1 transition-all duration-500 overflow-hidden text-gray-700 dark:text-gray-500"
-                    dangerouslySetInnerHTML={experience.description}
+                    dangerouslySetInnerHTML={{
+                      __html: experience.description || "",
+                    }}
                     style={
-                      desc == experience.description
+                      desc === experience.description
                         ? { maxHeight: "700px" }
                         : { maxHeight: "0px" }
                     }
@@ -90,7 +96,7 @@ const Experience = () => {
                     setDesc(
                       desc === experience.description
                         ? ""
-                        : experience.description
+                        : experience.description || ""
                     )
                   }
                   style={
@@ -113,7 +119,7 @@ const Experience = () => {
                     setDesc(
                       desc === experience.description
                         ? ""
-                        : experience.description
+                        : experience.description || ""
                     )
                   }
                   style={
@@ -130,7 +136,7 @@ const Experience = () => {
                     setDesc(
                       desc === experience.description
                         ? ""
-                        : experience.description
+                        : experience.description || ""
                     )
                   }
                 >
@@ -149,9 +155,11 @@ const Experience = () => {
                   </div>
                   <p
                     className="mt-2 ml-2 mr-2 text-justify text-[1.1rem] overflow-y-auto scroll-px-1 transition-all duration-500 overflow-hidden text-gray-700 dark:text-gray-500"
-                    dangerouslySetInnerHTML={experience.description}
+                    dangerouslySetInnerHTML={{
+                      __html: experience.description || "",
+                    }}
                     style={
-                      desc == experience.description
+                      desc === experience.description
                         ? { maxHeight: "700px" }
                         : { maxHeight: "0px" }
                     }
