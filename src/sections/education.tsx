@@ -3,12 +3,12 @@ import React, { Fragment, useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import { IoSchoolSharp } from "react-icons/io5";
 
-import { EducationData } from "@/constants/EducationData";
+import { EducationData } from "../constants/EducationData";
 
 const Education = () => {
   const [isEducation, setIsEducation] = useState(false);
-  const educationRef = useRef();
-  const educationBoxesRef = useRef();
+  const educationRef = useRef<HTMLElement | null>(null);
+  const educationBoxesRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const getScreenWidth = () =>
@@ -24,15 +24,18 @@ const Education = () => {
         rootMargin: `${getScreenWidth() <= 700 ? "-100px" : "-300px"}`,
       }
     );
-
-    educationObserver.observe(educationRef.current);
-
-    if (isEducation) {
-      educationBoxesRef.current.classList.add("pop-up-child");
-    } else {
-      educationBoxesRef.current.classList.remove("pop-up-child");
+    if (educationRef.current) {
+      educationObserver.observe(educationRef.current);
     }
-  }, [isEducation]);
+
+    if (educationBoxesRef.current) {
+      if (isEducation) {
+        educationBoxesRef.current.classList.add("pop-up-child");
+      } else {
+        educationBoxesRef.current.classList.remove("pop-up-child");
+      }
+    }
+  }, [isEducation, educationRef, educationBoxesRef]);
 
   return (
     <Fragment>

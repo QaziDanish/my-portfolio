@@ -27,6 +27,7 @@ import {
 import { BsGit } from "react-icons/bs";
 import { FaAngular, FaAws } from "react-icons/fa";
 import { GrGraphQl, GrMysql } from "react-icons/gr";
+import React from "react";
 
 export const TechStackData = [
   {

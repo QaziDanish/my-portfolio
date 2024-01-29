@@ -1,7 +1,7 @@
 "use client";
 import React, { Fragment, useState, useEffect, useRef } from "react";
 import { FaLaptopCode } from "react-icons/fa";
-import { TechStackData } from "@/constants/SkillsData";
+import { TechStackData } from "../constants/SkillsData";
 
 export interface Tech {
   name: string;

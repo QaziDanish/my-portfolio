@@ -4,7 +4,8 @@ import { MdWork } from "react-icons/md";
 import { ImLocation } from "react-icons/im";
 import { BsArrowDownCircle } from "react-icons/bs";
 
-import { ExperienceData } from "@/constants/ExperienceData";
+import { ExperienceData } from "../constants/ExperienceData";
+import React from "react";
 
 interface ExperienceProps {}
 
@@ -58,9 +59,9 @@ const Experience: React.FC<ExperienceProps> = () => {
                   className="md:w-[45%] cursor-pointer p-3 border border-zinc-300 dark:border-zinc-700 shadow-zinc-300 dark:shadow-zinc-700 shadow-sm rounded"
                   onClick={() =>
                     setDesc(
-                      desc === experience.description
+                      desc === experience.description.__html
                         ? ""
-                        : experience.description || ""
+                        : experience.description.__html || ""
                     )
                   }
                 >
@@ -81,10 +82,10 @@ const Experience: React.FC<ExperienceProps> = () => {
                   <p
                     className="mt-2 ml-2 mr-2 text-justify text-[1.1rem] overflow-y-auto scroll-px-1 transition-all duration-500 overflow-hidden text-gray-700 dark:text-gray-500"
                     dangerouslySetInnerHTML={{
-                      __html: experience.description || "",
+                      __html: experience.description.__html || "",
                     }}
                     style={
-                      desc === experience.description
+                      desc === experience.description.__html
                         ? { maxHeight: "700px" }
                         : { maxHeight: "0px" }
                     }
@@ -94,13 +95,13 @@ const Experience: React.FC<ExperienceProps> = () => {
                   className="transition-all duration-500 hidden md:block"
                   onClick={() =>
                     setDesc(
-                      desc === experience.description
+                      desc === experience.description.__html
                         ? ""
-                        : experience.description || ""
+                        : experience.description.__html || ""
                     )
                   }
                   style={
-                    desc === experience.description
+                    desc === experience.description.__html
                       ? { transform: "rotate(180deg)" }
                       : {}
                   }
@@ -117,13 +118,13 @@ const Experience: React.FC<ExperienceProps> = () => {
                   className="hidden md:block"
                   onClick={() =>
                     setDesc(
-                      desc === experience.description
+                      desc === experience.description.__html
                         ? ""
-                        : experience.description || ""
+                        : experience.description.__html || ""
                     )
                   }
                   style={
-                    desc === experience.description
+                    desc === experience.description.__html
                       ? { transform: "rotate(180deg)" }
                       : {}
                   }
@@ -134,9 +135,9 @@ const Experience: React.FC<ExperienceProps> = () => {
                   className="md:w-[45%] cursor-pointer  transition-all duration-500 p-3 border border-zinc-300 dark:border-zinc-700 shadow-zinc-300 dark:shadow-zinc-700 shadow-smrounded"
                   onClick={() =>
                     setDesc(
-                      desc === experience.description
+                      desc === experience.description.__html
                         ? ""
-                        : experience.description || ""
+                        : experience.description.__html || ""
                     )
                   }
                 >
@@ -156,10 +157,10 @@ const Experience: React.FC<ExperienceProps> = () => {
                   <p
                     className="mt-2 ml-2 mr-2 text-justify text-[1.1rem] overflow-y-auto scroll-px-1 transition-all duration-500 overflow-hidden text-gray-700 dark:text-gray-500"
                     dangerouslySetInnerHTML={{
-                      __html: experience.description || "",
+                      __html: experience.description.__html || "",
                     }}
                     style={
-                      desc === experience.description
+                      desc === experience.description.__html
                         ? { maxHeight: "700px" }
                         : { maxHeight: "0px" }
                     }

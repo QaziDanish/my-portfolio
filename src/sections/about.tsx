@@ -29,6 +29,14 @@ const About = () => {
       );
 
       aboutObserver.observe(aboutRef.current);
+
+      if (isAbout) {
+        profile2Ref.current?.classList.add("slide-in");
+        aboutInfoRef.current?.classList.add("slide-in");
+      } else {
+        profile2Ref.current?.classList.remove("slide-in");
+        aboutInfoRef.current?.classList.remove("slide-in");
+      }
     }
   }, [isAbout, aboutRef]);
 
