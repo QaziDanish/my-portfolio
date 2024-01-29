@@ -1,7 +1,7 @@
 export const EducationData = [
   {
     name: "Master in Software Engineering",
-    image: "/images/Nust.png",
+    image: "/images/NUST.png",
     schoolOrCollege:
       "National University Of Science and Technology, Islamabad, Pakistan",
     fromTo: "2012 - 2015",
