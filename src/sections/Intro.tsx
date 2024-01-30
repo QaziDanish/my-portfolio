@@ -62,7 +62,8 @@ const Intro = () => {
               I&apos;m a full stack
               <span className="text-[#c72c6c] dark:text-[#07d0e5]">
                 {" "}
-                Javascript developer <span className="text-white blink">|</span>
+                Javascript developer{" "}
+                <span className="text-[#c72c6c] blink dark:text-white">|</span>
               </span>
             </p>
             <div className="mt-5 md:mt-10 flex gap-3">
