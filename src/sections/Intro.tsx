@@ -67,17 +67,17 @@ const Intro = () => {
               </span>
             </p>
             <div className="mt-5 md:mt-10 flex gap-3">
-              {/* Hire Me Button */}
+              {/* Hire Me Button
               <Link
                 className="text-white text-xl font-semibold rounded bg-red-400 hover:bg-red-500 px-2 py-1"
                 href={"#getInTouch"}
               >
                 Hire me
-              </Link>
+              </Link> */}
               {/* Download CV Button */}
               <Link
                 className="text-xl font-semibold rounded border border-red-500 hover:text-white hover:bg-red-500 px-2 py-1"
-                href="https://drive.google.com/file/d/1HvJmyKef_SyMOpmUADQHdCpgm0xF5uU9/view"
+                href="https://drive.google.com/file/d/1GYzbmoUiml0daYKc9EAYVyFbso6NETuX/view"
                 target="_blank"
               >
                 Download CV
